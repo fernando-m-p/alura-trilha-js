@@ -6,7 +6,7 @@ Instrutor: Flávio Henrique de Sousa Almeida
     target="_blank" 
     rel="noopener nofollow" 
     href="https://www.linkedin.com/in/fl%C3%A1vio-henrique-almeida-a6315747/">
-        <img src="/assets/images/course/linkedin.svg"> Linkedin
+        ![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)
     </a>
 </p>
 
