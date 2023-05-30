@@ -1,14 +1,8 @@
 # TypeScript parte 1: evoluindo seu JavaScript
 
-Instrutor: Flávio Henrique de Sousa Almeida 
-<p>
-    <a 
-    target="_blank" 
-    rel="noopener nofollow" 
-    href="https://www.linkedin.com/in/fl%C3%A1vio-henrique-almeida-a6315747/">
-        ![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)
-    </a>
-</p>
+**Instrutor:** Flávio Henrique de Sousa Almeida  [![LinkedIn][linkedin-shield]][linkedin-url]
+
+**Curso:** TypeScript parte 1: evoluindo seu JavaScript [link](https://cursos.alura.com.br/course/typescript-evoluindo-javascript)
 
 ## O que aprendi?
 
@@ -25,3 +19,7 @@ Entre na pasta curso-ts-1 e executar
 ```
 npm run start
 ```
+
+
+[linkedin-shield]: https://cursos.alura.com.br/assets/images/course/linkedin.svg
+[linkedin-url]: https://www.linkedin.com/in/fl%C3%A1vio-henrique-almeida-a6315747/
