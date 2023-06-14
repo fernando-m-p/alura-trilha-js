@@ -4,6 +4,7 @@ import { logarTempoDeExecucao } from '../decorators/logar-tempo-de-execucao.js';
 import { DiasDaSemana } from '../enums/dias-da-semana.js';
 import { Negociacao } from '../models/negociacao.js';
 import { Negociacoes } from '../models/negociacoes.js';
+import { NegociacoesService } from '../service/negociacoes-service.js';
 import { MensagemView } from '../views/mensagem-view.js';
 import { NegociacoesView } from '../views/negociacoes-view.js';
 
@@ -17,6 +18,7 @@ export class NegociacaoController {
     private negociacoes = new Negociacoes();
     private negociacoesView = new NegociacoesView('#negociacoesView');
     private mensagemView = new MensagemView('#mensagemView');
+    private negociacoesService = new NegociacoesService();
 
     constructor() {
         this.negociacoesView.update(this.negociacoes);
@@ -59,5 +61,21 @@ export class NegociacaoController {
     private atualizaView(): void {
         this.negociacoesView.update(this.negociacoes);
         this.mensagemView.update('Negociação adicionada com sucesso');
+    }
+
+    public importarDados():void{
+        const negociacoes =  this.negociacoes.lista();
+        this.negociacoesService
+            .pegarNegociacoesDoDia()
+            .then(
+                novasNegociacoesDoDia =>{
+                    novasNegociacoesDoDia.forEach(negocicao =>{
+                        this.negociacoes.adiciona(negocicao);
+                    });
+                    this.negociacoesView.update(this.negociacoes);
+                    this.mensagemView.update('Negociacões importadas com sucesso!')   
+                }
+            )
+        
     }
 }

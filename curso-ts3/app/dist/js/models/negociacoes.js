@@ -8,4 +8,10 @@ export class Negociacoes {
     lista() {
         return this.negociacoes;
     }
+    compara(negociacoes) {
+        return JSON.stringify(this.negociacoes) === JSON.stringify(negociacoes.lista());
+    }
+    toString() {
+        return JSON.stringify(this.negociacoes, null, 2);
+    }
 }
